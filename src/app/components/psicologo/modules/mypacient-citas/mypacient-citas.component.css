@@ -1,0 +1,7 @@
+#ocultar {
+    display: none;
+}
+
+#chk:checked + #ocultar {
+    display: block;
+}

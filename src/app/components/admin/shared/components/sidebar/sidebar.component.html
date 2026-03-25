@@ -1,0 +1,30 @@
+
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+          <h2>{{adminInfo.nombre}} {{adminInfo.primerApellido}} {{adminInfo.segundoApellido}}</h2>
+          <h4>{{adminInfo.email}}</h4>
+        </div>
+        <img src="../../../../../../assets/img/logo.png" alt="Emilio Figueroa">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Paginas</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin">Pacientes</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/psicologos">Psicologos</a>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Herramientas</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/profile']">
+      <p><i class="fas fa-user-md"></i> Perfil</p>
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/admin/registrarpsicologo']">
+      <p><i class="fas fa-user-plus"></i> Registrar psicologo</p>
+    </a>
+
+</mat-nav-list>

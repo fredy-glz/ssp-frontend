@@ -1,0 +1,26 @@
+
+<mat-nav-list>
+  <div class="profile-card">
+      <div class="header">
+          <h2>{{psicologoInfo.nombre}} {{psicologoInfo.primerApellido}} {{psicologoInfo.segundoApellido}}</h2>
+          <h4>{{psicologoInfo.email}}</h4>
+      </div>
+      <img src="../../../../../../assets/img/logo.png" alt="logo">
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Paginas</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/psicologo/pacientes']">Pacientes nuevos</a>
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/psicologo/mispacientes']">Mis pacientes</a>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Herramientas</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/profile']">
+    <p><i class="fas fa-user-md"></i> Perfil</p>
+  </a>
+
+</mat-nav-list>

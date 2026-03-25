@@ -1,0 +1,149 @@
+<div class="card">
+  <div class="card-header" style="background-color: #D9EDF7;">
+    Registrar Psicologo
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <form autocomplete="off" [formGroup]="formulario" (ngSubmit)="guardar()">
+        <h2>Información personal</h2>
+        <hr>
+        <div class="row">
+          <div class="col-auto">
+            <label>| Nombre(s):</label>
+            <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="validadores.nombreNoValido(formulario)">
+            <small *ngIf="validadores.nombreNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Primer Apellido:</label>
+            <input type="text" class="form-control" placeholder="Primer Apellido" formControlName="primerApellido" [class.is-invalid]="validadores.primerApellidoNoValido(formulario)">
+            <small *ngIf="validadores.primerApellidoNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Segundo Apellido:</label>
+            <input type="text" class="form-control" placeholder="Segundo Apellido" formControlName="segundoApellido" [class.is-invalid]="validadores.segundoApellidoNoValido(formulario)">
+            <small *ngIf="validadores.segundoApellidoNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Edad:</label>
+            <input type="number" class="form-control" placeholder="Edad" formControlName="edad" [class.is-invalid]="validadores.edadNoValido(formulario)">
+            <small *ngIf="validadores.edadNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Estado civil:</label>
+            <input type="text" class="form-control" placeholder="Estado civil" formControlName="estadoCivil" [class.is-invalid]="validadores.estadoCivilNoValido(formulario)">
+            <small *ngIf="validadores.estadoCivilNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+        </div>
+        <h4>• Fecha y lugar de nacimiento</h4>
+        <div class="row">
+          <div class="col-auto">
+            <label>| Fecha de nacimiento:</label>
+            <input type="date" id="start" class="form-control" name="trip-start" value="2002-07-22" min="1970-01-01" max="2025-12-31" formControlName="fechaNacimiento" [class.is-invalid]="validadores.fechaNacimientoNoValido(formulario)">
+            <small *ngIf="validadores.fechaNacimientoNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Ciudad:</label>
+            <input type="text" class="form-control" placeholder="Ciudad" formControlName="ciudadNacimiento" [class.is-invalid]="validadores.ciudadNacimientoNoValido(formulario)">
+            <small *ngIf="validadores.ciudadNacimientoNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Estado:</label>
+            <input type="text" class="form-control" placeholder="Estado" formControlName="estadoNacimiento" [class.is-invalid]="validadores.estadoNacimientoNoValido(formulario)">
+            <small *ngIf="validadores.estadoNacimientoNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+        </div>
+        <h2>Teléfonos de contacto</h2>
+        <hr>
+        <div class="row">
+          <div class="col-auto">
+            <label>| Teléfono celular:</label>
+            <input type="text" class="form-control" placeholder="Teléfono celular" formControlName="telefonoCelular" [class.is-invalid]="validadores.telefonoCelularNoValido(formulario)" maxlength="10">
+            <small *ngIf="validadores.telefonoCelularNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Teléfono de casa:</label>
+            <input type="text" class="form-control" placeholder="Teléfono de casa" formControlName="telefonoCasa" [class.is-invalid]="validadores.telefonoCasaNoValido(formulario)" maxlength="10">
+            <small *ngIf="validadores.telefonoCasaNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+        </div>
+        <h2>Domicilio</h2>
+        <hr>
+        <div class="row">
+          <div class="col-auto">
+            <label>| Calle:</label>
+            <input type="text" class="form-control" placeholder="Calle" formControlName="calleDomicilio" [class.is-invalid]="validadores.calleDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.calleDomicilioNoValido(formulario)" class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Numero:</label>
+            <input type="text" class="form-control" placeholder="Numero" formControlName="numeroDomicilio" [class.is-invalid]="validadores.numeroDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.numeroDomicilioNoValido(formulario)" class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Colonia:</label>
+            <input type="text" class="form-control" placeholder="Colonia" formControlName="coloniaDomicilio" [class.is-invalid]="validadores.coloniaDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.coloniaDomicilioNoValido(formulario)" class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Código postal (C.P.):</label>
+            <input type="number" class="form-control" placeholder="Código postal:" formControlName="cpDomicilio" [class.is-invalid]="validadores.cpDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.cpDomicilioNoValido(formulario)"
+                class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Localidad:</label>
+            <input type="text" class="form-control" placeholder="Localidad" formControlName="localidadDomicilio" [class.is-invalid]="validadores.localidadDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.localidadDomicilioNoValido(formulario)" class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Ciudad:</label>
+            <input type="text" class="form-control" placeholder="Ciudad" formControlName="ciudadDomicilio" [class.is-invalid]="validadores.ciudadDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.ciudadDomicilioNoValido(formulario)" class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+          <div class="col-auto">
+            <label>| Estado:</label>
+            <input type="text" class="form-control" placeholder="Estado:" formControlName="estadoDomicilio" [class.is-invalid]="validadores.estadoDomicilioNoValido(formulario)">
+            <small *ngIf="validadores.estadoDomicilioNoValido(formulario)" class="form-text text-danger animated fadeIn">Campo requerido</small>
+          </div>
+        </div>
+        <h2>Información para inicio de sesión</h2>
+        <hr>
+        <div class="row">
+          <div class="col-md-7">
+            <label>| Correo:</label>
+            <input type="text" class="form-control correo" placeholder="Correo" formControlName="email" [class.is-invalid]="validadores.emailNoValido(formulario)">
+            <small *ngIf="validadores.emailNoValido(formulario)" class="form-text text-danger animated fadeIn">El Campo requerido</small>
+          </div>
+          <div class="col-md-6">
+            <label>| Contraseña:</label>
+            <input type="text" class="form-control contrasenia" placeholder="Contraseña" formControlName="password" [class.is-invalid]="validadores.passwordNoValido(formulario)">
+            <small *ngIf="validadores.passwordNoValido(formulario)" class="form-text text-danger animated fadeIn">> Minimo 8 caracteres<br>> Al menos un dígito<br>> Al menos una minúscula<br>> Al menos una mayúscula<br>> No espacios en blanco.</small>
+          </div>
+          <div class="col-md-6">
+            <label>| Repetir contraseña:</label>
+            <input type="text" class="form-control contrasenia" placeholder="Repetir contraseña" formControlName="password2" [class.is-invalid]="validadores.password2NoValido(formulario)">
+            <small *ngIf="validadores.password2NoValido(formulario)" class="form-text text-danger animated fadeIn">Las contraseñas deben ser similares</small>
+          </div>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="input-group col">
+              <button type="submit" class="btn btn-outline-primary btn-block">
+                Guardar
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </blockquote>
+  </div>
+</div>

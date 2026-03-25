@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+img{
+  width: 70%;
+  height: 70%;
+  float: right;
+}
+h3{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  #sin_cita{
+  display:none;
+  }
+  }

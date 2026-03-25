@@ -1,0 +1,172 @@
+p {
+  height: 600px;
+}
+
+label{
+  font-family: 'Poppins', sans-serif;
+}
+input{
+  font-family: 'Poppins', sans-serif;
+}
+div{
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  color: darkblue;
+}
+
+th{
+  background-image: linear-gradient(270deg, #174c87 0, #174c87 50%, #174c87 100%);
+
+}
+.center{
+  padding-left: 600px;
+  padding-right: 0px;
+  padding-top: 0%;
+}
+
+div {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#content{
+  margin: 10px;
+  background: #FFF;
+  padding: 10px;
+}
+
+label, h2, h4 {
+  font-weight: normal;
+}
+
+input, option, select {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+*::-webkit-input-placeholder {
+  color: #999996;
+}
+
+.contrasenia, .correo {
+  text-transform: none;
+}
+
+.row {
+  width: 100%;
+}
+
+form{
+  border-radius: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  position: relative;
+  background-image: radial-gradient(circle at 50% -20.71%, #bae0e6 0, #bbe0e9 6.25%, #bcdfeb 12.5%, #bedfed 18.75%, #c0deef 25%, #c3ddf0 31.25%, #c6dcf1 37.5%, #c9dbf2 43.75%, #cddaf2 50%, #d1d9f2 56.25%, #d5d8f1 62.5%, #d9d7f0 68.75%, #ddd6ee 75%, #e1d5ed 81.25%, #e4d4ea 87.5%, #e8d3e8 93.75%, #ebd2e5 100%);
+  border-radius: 3px;
+  color: rgb(8, 8, 8);
+  font-size: large;
+  padding: 20px;
+  margin: 10px;
+  width: auto;
+}
+
+input{
+  border: black;
+  outline: none;
+
+  width: 100%;
+}
+
+textarea{
+  width: 150%;
+}
+
+.field{
+  border: solid 1px rgb(12, 11, 11);
+  padding: 10px;
+
+
+}
+
+.field:focus{
+  border-color: #18A383;
+}
+
+
+.center-content{
+  text-align: left;
+}
+
+@media screen and (max-width: 1030px) {
+  form > div > div {
+    display: inline-block;
+    width: 100%;
+  }
+  .row{
+    display: grid;
+  }
+
+ }
+
+@media screen and (max-width: 820px){
+  textarea{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  form > div > div {
+    width: 100%;
+  }
+}
+
+
+#ocultar {
+
+  display: none;
+}
+
+#chk:checked + #ocultar {
+  display: block;
+}
+
+
+.btn-borde {
+  width: 100%;
+  font-size:x-large;
+  padding: .375rem .75rem;
+  margin-bottom: 10px;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,
+    background-color .15s ease-in-out;
+
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-borde:hover {
+  color: #fff;
+  background-color: #057272;
+}
+
+
+.round-table-left{
+  border-top-left-radius: .25rem;
+
+}
+
+.round-table-right{
+  border-top-right-radius: .25rem;
+
+}
+
+.round-bottom-left{
+  border-bottom-left-radius: .25rem;
+}
+
+.round-bottom-right{
+  border-bottom-right-radius: .25rem;
+}

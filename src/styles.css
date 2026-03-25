@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* angular-cli file: src/styles.css */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0px;
+  background: #E6E4D6;
+  overflow-x: hidden;
+}
+
+:root{
+    --azulUG:#00335B;
+    --azul75UG:#456A87;
+    --azul50UG:#8BA2B4;
+    --azul25UG:#E9EEF1;
+
+    --doradoUG:#ADA07A;
+    --dorado75UG:#C3B99E;
+    --dorado50UG:#D9D3C2;
+    --dorado25UG:#F0EDE6;
+
+    --amarilloUG:#F2E27F;
+    --amarillo75UG:#F5E9A1;
+    --amarillo50UG:#F9F1C4;
+    --amarillo25UG:#FCF9E7;
+
+    --primary-gradient: linear-gradient(to right, #252852, #2b5876);
+    --mango-gradient : linear-gradient(to right, #252850 , #3E5F8A);
+    --text-color: #F7F9F9;
+    --Montserrat: "Montserrat", cursive;
+    --Lobster: "Lobster", cursive;
+    --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+    --border-color: rgba(0,0,0,0.329);
+
+}
+
+.TituloUG
+{
+    font-family: 'Novecento Wide Normal';
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

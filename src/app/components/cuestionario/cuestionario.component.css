@@ -1,0 +1,22 @@
+.navbar_UGto {
+  /*background-color: #fff;
+  border-color: #fff;*/
+  border-bottom-color: #b5a36a!important;
+}
+
+.barra_azul {
+  width: 100%;
+  /*height: 200px;*/
+  border-bottom: 8px solid #9d925c;
+  background: #174d87;
+  background: -moz-linear-gradient(top, #174d87 0%, #0e345b 77%, #0e345b 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #174d87), color-stop(77%, #0e345b), color-stop(100%, #0e345b));
+  background: -webkit-linear-gradient(top, #174d87 0%, #0e345b 77%, #0e345b 100%);
+  background: -o-linear-gradient(top, #174d87 0%, #0e345b 77%, #0e345b 100%);
+  background: -ms-linear-gradient(top, #174d87 0%, #0e345b 77%, #0e345b 100%);
+  background: linear-gradient(to bottom, #174d87 0%, #0e345b 77%, #0e345b 100%);
+}
+
+.margen {
+  margin-left: 50px;
+}

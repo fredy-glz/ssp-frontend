@@ -1,0 +1,92 @@
+
+<div class="mt-4">
+  <div class="form">
+    <div id="content" class="border">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-dark"  >
+          <tr >
+            <th scope="col" class="round-table-left">Lunes</th>
+            <th scope="col">Martes</th>
+            <th scope="col">Miercoles</th>
+            <th scope="col">Jueves</th>
+            <th scope="col" class="round-table-right">Viernes</th>
+          </tr>
+        </thead>
+        <tbody style="background-color: rgb(187, 181, 181);">
+          <tr>
+            <td class="round-bottom-left">{{paciente.lunes}}</td>
+            <td>{{paciente.martes}}</td>
+            <td>{{paciente.miercoles}}</td>
+            <td>{{paciente.jueves}}</td>
+            <td class="round-bottom-right">{{paciente.viernes}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button type="button" class="btn-borde"><label for="chk" style="text-align: center;">Cita</label></button>
+    <input type="checkbox" id="chk" style="display: none;">
+    <form autocomplete="off" [formGroup]="formulario" (ngSubmit)="addEditEvent()" id="ocultar">
+      <div class="row mt-4" style="padding-left: 5%;">
+        <div class="col-md-7" style="margin-bottom: 20px;">
+          <label>| Titulo:</label>
+          <input type="text" class="form-control" placeholder="Titulo" formControlName="title" [class.is-invalid]="validadores.titleNoValido(formulario)">
+          <small *ngIf="validadores.titleNoValido(formulario)"
+          class="form-text text-danger animated fadeIn">Campo requerido</small>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <label>| Fecha:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <p-calendar
+            dateFormat="dd/mm/yy"
+            inputStyleClass="form-control"
+            formControlName="start"
+            showTime="true"
+            [minDate]="today"
+            [locale]="localeES"
+            [class.is-invalid]="validadores.startDateNoValido(formulario)">
+          </p-calendar> <br>
+          <small *ngIf="validadores.startDateNoValido(formulario)"
+          class="form-text text-danger animated fadeIn">Campo requerido</small>
+          <!-- <p-checkbox name="show-end" binary="true" label="¿Tiene fin el evento?" (click)="tieneFin()">
+          </p-checkbox> -->
+        </div>
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <label>| Duracion:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <p-calendar
+            [timeOnly]="true"
+            formControlName="duracion"
+            [locale]="localeES"
+            [class.is-invalid]="validadores.endDateNoValido(formulario)">
+          </p-calendar>
+          <small *ngIf="validadores.endDateNoValido(formulario)"
+          class="form-text text-danger animated fadeIn">Campo requerido</small>
+        </div>
+        <div class="col-md-7">
+          <label for="type">Tipo de Cita</label>
+          <select class="form-control" formControlName="className" [class.is-invalid]="validadores.classNameNoValido(formulario)">
+            <option value="Normal">Cita</option>
+            <option value="Urgente">Cita Urgente</option>
+            <option value="Primera">Primera Cita</option>
+            <option value="Ultima">Última Cita</option>
+          </select>
+          <small *ngIf="validadores.classNameNoValido(formulario)"
+          class="form-text text-danger animated fadeIn">Campo requerido</small>
+        </div>
+        <div class="col-md-7" style="margin-bottom: 10px;">
+          <label for="description">Descripción</label>
+          <textarea class="form-control"
+          formControlName="description" [class.is-invalid]="validadores.descriptionNoValido(formulario)"></textarea>
+          <small *ngIf="validadores.descriptionNoValido(formulario)"
+          class="form-text text-danger animated fadeIn">Campo requerido</small>
+        </div>
+        <div class="col-md-7" style="text-align:right;">
+            <button type="button" type="submit" class="btn btn-primary" >{{mode === MODE_ADD ? 'Añadir': 'Guardar'}}  </button >
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">

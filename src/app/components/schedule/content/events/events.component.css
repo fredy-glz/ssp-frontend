@@ -1,0 +1,68 @@
+h2{
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  color: #093B5E;
+}
+h1{
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  color: #093B5E;
+}
+pre{
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #093B5E;
+}
+div.fc div.fc-view-container div.fc-view div.fc-scroller{
+  height: 100% !important;
+}
+
+.fc-list-item.Normal span.fc-event-dot, .legend-Normal{
+  background-color: #b868a0;
+}
+
+
+.fc-list-item.Urgente span.fc-event-dot, .legend-Urgente{
+  background-color: #ed5565;
+}
+
+
+.fc-list-item.Primera span.fc-event-dot, .legend-Primera{
+  background-color: #a0d468;
+}
+
+.fc-list-item.Ultima span.fc-event-dot, .legend-Ultima{
+  background-color: #fc9f66;
+}
+
+.fc .fc-event.Normal{
+  background-color: #b868a0;
+  border: 1px solid #b868a0;
+}
+
+.fc .fc-event.Urgente{
+  background-color: #ed5565;
+  border: 1px solid #ed5565;
+}
+
+.fc .fc-event.Primera{
+  background-color: #a0d468;
+  border: 1px solid #a0d468;
+}
+
+.fc .fc-event.Ultima{
+  background-color: #fc9f66;
+  border: 1px solid #fc9f66;
+}
+
+button{
+background-color:#093B5E;
+color: whitesmoke;
+}
+
+.btn {
+  text-transform: capitalize;
+}
+.egt{
+  border: #093B5E;
+}

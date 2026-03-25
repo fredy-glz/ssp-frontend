@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+div {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+label, h2, h4 {
+  font-weight: bold;
+}
+
+input, option, select {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+*::-webkit-input-placeholder {
+  color: #999996;
+}
+
+.contrasenia, .correo {
+  text-transform: none;
+}
+
+.row {
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+  top: 50%;
+  font-size: 18px;
+}
+
+form > div > div {
+  /* width: 33%; */
+  padding-bottom: 25px;
+}
+
+
+@media screen and (max-width: 820px) {
+  form > div > div {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  form > div > div {
+    width: 100%;
+  }
+
+  .form {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+

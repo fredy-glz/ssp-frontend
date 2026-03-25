@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg barra_azul navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><img src="../../../../../../assets/img/escudoUG.png" alt="escudoUG" width="50"></a>
+  <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+    <ul fxLayout="row" fxLayoutGap="20px" style="color: white;">
+        <li>
+            <button mat-button [matMenuTriggerFor]="menu">
+              <mat-icon>person_outline</mat-icon> {{ userInfo.nombre }} {{ userInfo.primerApellido }}
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/profile']">
+                  <mat-icon>person_outline</mat-icon>
+                    Perfil
+                </button>
+                <button mat-menu-item [routerLink]="['/schedule']">
+                  <mat-icon>calendar_today</mat-icon>
+                    Calendario
+                </button>
+                <button mat-menu-item (click)="logout()">
+                  <mat-icon>exit_to_app</mat-icon>
+                  Cerrar sesión
+              </button>
+            </mat-menu>
+        </li>
+    </ul>
+</div>
+</nav>
